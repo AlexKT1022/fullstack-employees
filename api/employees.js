@@ -2,6 +2,8 @@ import express from 'express';
 
 const router = express.Router();
 
-// TODO: this file!
+router.get('/', (req, res, next) => {
+  res.send('employees');
+});
 
 export default router;
