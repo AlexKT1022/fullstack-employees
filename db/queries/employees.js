@@ -1,7 +1,7 @@
 import db from '#db/client';
 
 /** @returns the employee created according to the provided details */
-export const createEmployee = async ({ name, birthday, salary }) => {
+export const createEmployeeQuery = async ({ name, birthday, salary }) => {
   const sql = `
     insert into employees(name, birthday, salary)
     values ($1, $2, $3)
@@ -17,7 +17,10 @@ export const createEmployee = async ({ name, birthday, salary }) => {
 
 /** @returns all employees */
 export const getEmployees = async () => {
-  // TODO
+  const sql = `select * from employees`;
+  const { rows } = await db.query(sql);
+
+  return rows;
 };
 
 /**
@@ -25,7 +28,13 @@ export const getEmployees = async () => {
  * @returns undefined if employee with the given id does not exist
  */
 export const getEmployee = async (id) => {
-  // TODO
+  const sql = `
+    select * from employees
+    where id = ${id}
+  `;
+  const { rows } = await db.query(sql);
+
+  return rows[0];
 };
 
 /**
@@ -33,7 +42,15 @@ export const getEmployee = async (id) => {
  * @returns undefined if employee with the given id does not exist
  */
 export const updateEmployee = async ({ id, name, birthday, salary }) => {
-  // TODO
+  const sql = `
+    update employees
+    set name = $1, birthday = $2, salary = $3
+    where id = ${id}
+  `;
+  const values = [name, birthday, salary];
+  const res = await db.query(sql, values);
+
+  return res;
 };
 
 /**
