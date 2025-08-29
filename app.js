@@ -1,7 +1,8 @@
 import express from 'express';
-import logger from '#middleware/logger';
+
 import employees from '#api/employees';
 import errorHandler from '#controllers/errorHandler';
+import logger from '#middleware/logger';
 
 const app = express();
 

@@ -1,4 +1,4 @@
 {
   "singleQuote": true,
-  "plugins": ["prettier-plugin-sql"]
+  "plugins": ["prettier-plugin-organize-imports", "prettier-plugin-sql"]
 }
