@@ -1,3 +1,8 @@
-DROP TABLE IF EXISTS employees;
+drop table if exists employees;
 
-
+create table employees (
+  id serial primary key,
+  name text not null,
+  birthday date not null,
+  salary integer not null
+)
