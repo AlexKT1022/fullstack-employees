@@ -60,7 +60,9 @@ export const deleteEmployee = async (id) => {
     WHERE id = $1
     RETURNING *
   `;
-  const { rows } = db.query(sql, [id]);
+  const { rows } = await db.query(sql, [id]);
+
+  console.log(rows);
 
   return rows[0];
 };
