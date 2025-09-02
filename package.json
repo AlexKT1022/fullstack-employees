@@ -1,0 +1,32 @@
+{
+  "name": "fullstack-employees",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "imports": {
+    "#*": "./*.js"
+  },
+  "dependencies": {
+    "prettier-plugin-organize-imports": "^4.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-sql": "^0.19.2"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexKT1022/fullstack-employees.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexKT1022/fullstack-employees/issues"
+  },
+  "homepage": "https://github.com/AlexKT1022/fullstack-employees#readme"
+}
